@@ -1,17 +1,23 @@
 import React from "react";
+import imgBanner from "../../assets/Home/fondoHome.jpeg";
 
 const Banner = () => {
   return (
-    <div className="h-[800px] px-8 py-24 bg-gradient-to-r from-black to-black flex-col justify-end items-start gap-2.5 inline-flex">
-      <div className="flex-col justify-start items-start gap-16 flex">
-        <div className="w-[1376px] justify-start items-end gap-4 inline-flex">
-          <div className="grow shrink basis-0 text-white text-[56px] font-bold font-['Raleway'] uppercase leading-[64px]">
-            Transforma tu espacio con muebles únicos
-          </div>
-          <div className="px-6 py-4 bg-[#d5d5d5]/10 rounded-sm backdrop-blur-xl justify-start items-start gap-1 flex">
-            <div className="text-white text-base font-bold font-['Raleway'] uppercase leading-normal tracking-tight">
-              MÁS INFORMACIÓN
-            </div>
+    <div className="w-full h-[800px] bg-black/70 grid justify-center">
+      <div
+        className="w-[1440px] bg-cover bg-center grid justify-center"
+        style={{ backgroundImage: `url(${imgBanner})` }}
+      >
+        <div className="px-8 py-24 grid gap-2.5 bg-gradient-to-r from-black/80 to-black/50">
+          <div className="flex items-end gap-4 justify-self-end">
+            <h1 className="text-white text-[56px] font-bold font-['Raleway'] uppercase leading-[64px]">
+              Transforma tu espacio con muebles únicos
+            </h1>
+            <button className="px-6 py-4 bg-[#d5d5d5]/10 rounded-sm backdrop-blur-xl flex">
+              <span className="text-white text-base font-bold font-['Raleway'] uppercase leading-normal tracking-tight">
+                MÁS INFORMACIÓN
+              </span>
+            </button>
           </div>
         </div>
       </div>

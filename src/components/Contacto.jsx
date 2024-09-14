@@ -1,27 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Contacto = () => {
   return (
     <div className="grid justify-items-center mb-5">
       <div className="grid gap-10 mb-10">
-        {" "}
         <p className="text-[42px] font-semibold font-['Raleway'] leading-[52px]">
           Ponte en Contacto con Nosotros
         </p>
-        <div className="w-[714px] h-[68.02px] text-[#151438]/40 text-[22px] font-medium font-['Raleway'] leading-loose">
-          Quieres más información sobre este proyecto, puedes escribirnos o
-          llamarnos te informaremos encantados
+        <div className="w-[714px] text-[#151438]/40 text-[22px] font-medium font-['Raleway'] leading-loose">
+          ¿Quieres más información sobre este proyecto? Puedes escribirnos o
+          llamarnos, te informaremos encantados.
         </div>
-        <div className="w-[308px] h-[27.63px] text-black text-base font-normal font-['Raleway'] leading-relaxed">
+        <div className="w-[308px] text-black text-base font-normal font-['Raleway'] leading-relaxed">
           +34 xxx xxx xxx
-        </div>{" "}
+        </div>
       </div>
       <form
         action="https://formsubmit.co/8ef3a12491cf88e883476dae52fd2893"
         method="POST"
-        className="h-[516px] flex-col justify-start items-start gap-[35px] inline-flex"
+        className="h-[516px] flex flex-col gap-[35px]"
       >
-        <div className="w-[783.71px] justify-between items-center inline-flex">
+        <div className="w-[783.71px] flex justify-between items-center">
           <input
             type="text"
             name="nombre"
@@ -57,7 +56,7 @@ const Contacto = () => {
         />
         <button
           type="submit"
-          className="w-60 h-14 px-6 py-4 bg-[#919e32]/60 rounded-sm justify-center items-center gap-1 inline-flex text-white text-base font-normal font-['Raleway'] uppercase leading-normal tracking-tight hover:bg-[#919e32]/80 transition-colors"
+          className="w-60 h-14 bg-[#919e32]/60 rounded-sm text-white text-base font-normal font-['Raleway'] uppercase hover:bg-[#919e32]/80 transition-colors"
         >
           ENVIAR
         </button>
