@@ -7,6 +7,12 @@ const Nav = () => {
       behavior: "smooth",
     });
   };
+  const scrollToAboutUs = () => {
+    window.scrollTo({
+      top: 800,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="w-full absolute flex justify-center">
@@ -16,11 +22,14 @@ const Nav = () => {
             className="w-[108px] h-[33px] mx-[31px]"
             src="https://via.placeholder.com/108x33"
           />
-          <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex">
+          <button
+            onClick={scrollToAboutUs}
+            className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex"
+          >
             <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight">
               ¿Que es abitacolo?
             </div>
-          </div>
+          </button>
           <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex">
             <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight">
               Nuestro equipo
