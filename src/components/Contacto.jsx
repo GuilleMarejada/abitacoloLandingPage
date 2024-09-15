@@ -4,14 +4,14 @@ const Contacto = () => {
   return (
     <div className="grid justify-items-center mb-5">
       <div className="grid gap-10 mb-10">
-        <p className="text-[42px] font-semibold font-['Raleway'] leading-[52px]">
+        <p className="text-[42px] font-semibold leading-[52px]">
           Ponte en Contacto con Nosotros
         </p>
-        <div className="w-[714px] text-[#151438]/40 text-[22px] font-medium font-['Raleway'] leading-loose">
+        <div className="w-[714px] text-[#151438]/40 text-[22px] font-medium leading-loose">
           ¿Quieres más información sobre este proyecto? Puedes escribirnos o
           llamarnos, te informaremos encantados.
         </div>
-        <div className="w-[308px] text-black text-base font-normal font-['Raleway'] leading-relaxed">
+        <div className="w-[308px] text-black text-base font-normal leading-relaxed">
           +34 xxx xxx xxx
         </div>
       </div>
@@ -25,24 +25,28 @@ const Contacto = () => {
             type="text"
             name="nombre"
             placeholder="Nombre"
-            className="w-[476px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium font-['Raleway'] leading-relaxed placeholder-[#151438]/40"
+            autoComplete="name"
+            className="w-[476px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium leading-relaxed placeholder-[#151438]/40"
           />
           <input
             type="tel"
             name="telefono"
             placeholder="Teléfono"
-            className="w-auto h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium font-['Raleway'] leading-relaxed placeholder-[#151438]/40"
+            autoComplete="tel"
+            className="w-auto h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium leading-relaxed placeholder-[#151438]/40"
           />
         </div>
         <input
           type="email"
           name="email"
           placeholder="Email"
-          className="w-[792px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium font-['Raleway'] leading-relaxed placeholder-[#151438]/40"
+          autoComplete="email"
+          className="w-[792px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium leading-relaxed placeholder-[#151438]/40"
         />
         <select
           name="motivo"
-          className="w-[792px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium font-['Raleway'] leading-relaxed text-[#151438]/40"
+          autoComplete="off"
+          className="w-[792px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium leading-relaxed text-[#151438]/40"
         >
           <option value="">Indícanos el motivo del contacto</option>
           <option value="consulta">Consulta</option>
@@ -52,11 +56,12 @@ const Contacto = () => {
         <textarea
           name="mensaje"
           placeholder="Tu mensaje"
-          className="w-[792px] h-[170px] rounded-sm border border-[#666666] p-4 text-lg font-medium font-['Raleway'] leading-relaxed placeholder-[#151438]/40 resize-none"
+          autoComplete="off"
+          className="w-[792px] h-[170px] rounded-sm border border-[#666666] p-4 text-lg font-medium leading-relaxed placeholder-[#151438]/40 resize-none"
         />
         <button
           type="submit"
-          className="w-60 h-14 bg-[#919e32]/60 rounded-sm text-white text-base font-normal font-['Raleway'] uppercase hover:bg-[#919e32]/80 transition-colors"
+          className="w-60 h-14 bg-[#919e32]/60 rounded-sm text-white text-base font-normal uppercase hover:bg-[#919e32]/80 transition-colors"
         >
           ENVIAR
         </button>
