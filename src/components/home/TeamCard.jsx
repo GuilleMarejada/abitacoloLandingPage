@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import instagramLogo from "../../assets/IconIG.svg";
-import linkedinLogo from "../../assets/IconLinkdn.svg";
+import IconLinkdn from "../../assets/IconLinkdnBlack.svg";
+import IconIG from "../../assets/IconIGBlack.svg";
 const TeamCard = ({
   person,
   position,
@@ -29,12 +29,12 @@ const TeamCard = ({
           <div className="w-[395px] flex items-center gap-4">
             {linkedin && (
               <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                <img src={linkedinLogo} alt="LinkedIn" className="h-6 w-6" />
+                <img src={IconLinkdn} alt="LinkedIn" className="h-6 w-6" />
               </a>
             )}
             {instagram && (
               <a href={instagram} target="_blank" rel="noopener noreferrer">
-                <img src={instagramLogo} alt="Instagram" className="h-6 w-6" />
+                <img className="w-6 h-6" src={IconIG} alt="Instagram" />
               </a>
             )}
           </div>
