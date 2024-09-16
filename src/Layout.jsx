@@ -4,6 +4,7 @@ import Home from "./views/Home";
 import Articles from "./views/Articles";
 import Blog from "./views/Blog";
 import Contacto from "./components/Contacto";
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
         <Route path="/Blog" element={<Blog />} />
       </Routes>
       <Contacto />
+      <Footer/>
     </Router>
   );
 };
