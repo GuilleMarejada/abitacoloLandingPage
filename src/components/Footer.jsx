@@ -1,4 +1,6 @@
 import React from "react";
+import IconLinkdn from "../assets/IconLinkdn.svg";
+import IconIG from "../assets/IconIG.svg";
 
 const Footer = () => {
   return (
@@ -18,16 +20,8 @@ const Footer = () => {
             POLITICA DE COOKIES
           </p>
           <div className="flex gap-5">
-            <img
-              className="w-6 h-6"
-              src="../src/assets/IconIG.svg"
-              alt="Instagram"
-            ></img>
-            <img
-              className="w-6 h-6"
-              src="../src/assets/IconLinkdn.svg"
-              alt="LinkedIn"
-            ></img>
+            <img className="w-6 h-6" src={IconIG} alt="Instagram"></img>
+            <img className="w-6 h-6" src={IconLinkdn} alt="LinkedIn"></img>
           </div>
         </div>
       </div>
