@@ -77,7 +77,7 @@ const TeamCarousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto overflow-hidden">
+    <div className="relative bg-gris2 w-full max-w-5xl mx-auto overflow-hidden">
       <div
         className="flex transition-transform duration-300 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
@@ -88,14 +88,16 @@ const TeamCarousel = () => {
           </div>
         ))}
       </div>
+      {/* Flecha izquierda */}
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2"
+        className="absolute bottom-4 left-1/4 transform translate-x-1/2 bg-white bg-opacity-50 rounded-full p-2"
         onClick={prevSlide}
       >
         &#8592;
       </button>
+      {/* Flecha derecha */}
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2"
+        className="absolute bottom-4 right-1/4 transform -translate-x-1/2 bg-white bg-opacity-50 rounded-full p-2"
         onClick={nextSlide}
       >
         &#8594;
