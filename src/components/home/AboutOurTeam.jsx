@@ -9,8 +9,8 @@ const AboutOurTeam = () => {
     }
   };
   return (
-    <div className="w-full bg-[#d9d9d9] grid justify-center">
-      <div className="max-w-[1440px] bg-white">
+    <div id="team" className="w-full bg-[#d9d9d9] grid justify-center">
+      <div className="max-w-[1440px] w-full bg-white">
         <div className="h-64 px-8 py-24 bg-white flex justify-center items-center">
           <h1 className="text-[56px] text-black/90 font-['Raleway'] uppercase leading-[64px]">
             Nuestro equipo
