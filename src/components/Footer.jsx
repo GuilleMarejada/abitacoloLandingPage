@@ -1,6 +1,7 @@
 import React from "react";
-import IconLinkdn from "../assets/IconLinkdn.svg";
-import IconIG from "../assets/IconIG.svg";
+import IconLinkdn from "../assets/IconLinkdnWhite.svg";
+import IconIG from "../assets/IconIGWhite.svg";
+import LogoAbitacolo from "../assets/LogoAbitacoloFooter.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
       <div className="flex items-center justify-between gap-[45px]">
         <img
           className="w-[328.99px] h-[93px]"
-          src="/src/assets/LogoAbitacoloFooter.png"
+          src={LogoAbitacolo}
           alt="Logo Abitacolo"
         ></img>
 
