@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-[1640px] h-60  bg-[#919e32] p-3 ">
+    <div className="w-full  h-[240px]  bg-[#919e32] p-3 ">
       <div className="flex items-center justify-between gap-[45px]">
         <img
           className="w-[328.99px] h-[93px]"
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" border w-[1335px] mt-2  border-solid border-white ml-[75px]"></div>
+      <div className=" border mt-2  border-solid border-white mx-[75px] mr-[150px]"></div>
       <div className="w-[875px] h-[68px] p-5 ml-[50px] mt-[25px] flex-col justify-start items-start gap-4 inline-flex">
 
       <div className="self-stretch justify-start items-center gap-7 inline-flex">
