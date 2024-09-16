@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import IconLinkdn from "../../assets/IconLinkdnBlack.svg";
 import IconIG from "../../assets/IconIGBlack.svg";
+
 const TeamCard = ({
   person,
   position,
@@ -11,38 +12,37 @@ const TeamCard = ({
   instagram,
 }) => {
   return (
-    <div className="h-[538px] w-[427px] pt-0.5 pb-12 bg-white flex-col gap-6 inline-flex">
-      <img className="w-[427px] h-[292px]" src={linkImage} alt="Team member" />
-      <div className="self-stretch h-[172px] px-4 flex-col gap-6 flex">
-        <div className="self-stretch h-[60px] flex-col gap-3 flex">
-          <div className="self-stretch text-black/90 text-2xl font-semibold font-['Raleway'] uppercase leading-7">
+    <div className="w-full h-[540px] max-w-sm bg-white flex flex-col gap-6 p-4">
+      <img className="w-full h-auto" src={linkImage} alt="Team member" />
+      <div className="flex flex-col gap-4">
+        <div>
+          <h2 className="text-black/90 text-2xl font-semibold uppercase leading-7">
             {person}
-          </div>
-          <div className="self-stretch text-black/90 text-xs font-normal font-['Raleway'] uppercase leading-tight">
+          </h2>
+          <p className="text-black/90 text-xs uppercase leading-tight">
             {position}
-          </div>
+          </p>
         </div>
-        <div className="self-stretch h-[88px] flex-col gap-6 flex">
-          <div className="self-stretch text-[#666666] text-sm font-normal font-['Raleway'] uppercase leading-tight">
-            {description}
-          </div>
-          <div className="w-[395px] flex items-center gap-4">
-            {linkedin && (
-              <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                <img src={IconLinkdn} alt="LinkedIn" className="h-6 w-6" />
-              </a>
-            )}
-            {instagram && (
-              <a href={instagram} target="_blank" rel="noopener noreferrer">
-                <img className="w-6 h-6" src={IconIG} alt="Instagram" />
-              </a>
-            )}
-          </div>
+        <p className="text-[#666666] text-sm uppercase leading-tight">
+          {description}
+        </p>
+        <div className="flex items-center gap-4">
+          {linkedin && (
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+              <img src={IconLinkdn} alt="LinkedIn" className="h-6 w-6" />
+            </a>
+          )}
+          {instagram && (
+            <a href={instagram} target="_blank" rel="noopener noreferrer">
+              <img className="h-6 w-6" src={IconIG} alt="Instagram" />
+            </a>
+          )}
         </div>
       </div>
     </div>
   );
 };
+
 TeamCard.propTypes = {
   person: PropTypes.string,
   position: PropTypes.string,

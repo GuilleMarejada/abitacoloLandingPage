@@ -20,7 +20,7 @@ const Contacto = () => {
         method="POST"
         className="h-[516px] flex flex-col gap-[35px]"
       >
-        <div className="max-w-[783.71px] flex justify-between items-center">
+        <div className="max-w-[783.71px] flex gap-2 justify-between items-center">
           <input
             type="text"
             name="nombre"

@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
       <div className=" border mt-2  border-solid border-white mx-[75px] mr-[150px]"></div>
-      <div className="w-[875px] h-[68px] p-5 ml-[50px] mt-[25px] flex-col justify-start items-start gap-4 inline-flex">
+      <div className="max-w-[875px] h-[68px] p-5 ml-[50px] mt-[25px] flex-col justify-start items-start gap-4 inline-flex">
         <div className="self-stretch justify-start items-center gap-7 inline-flex">
           <p className="text-white text-sm">¿Que es Abitacolo?</p>
           <p className="text-white text-sm">Nuestro equipo</p>
