@@ -2,15 +2,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-full  h-[240px]  bg-[#919e32] p-3 ">
-      <div className="flex items-center justify-between gap-[45px]">
+    <div className="w-full  h-[240px] grid justify-center  bg-[#919e32] p-3 ">
+        <div className="max-w-[1440px]">
+          <div className="flex items-center justify-between gap-[45px]">
         <img
-          className="w-[328.99px] h-[93px]"
+          className="max-w-[328.99px] h-[93px]"
           src="/src/assets/LogoAbitacoloFooter.png"
           alt="Logo Abitacolo"
         ></img>
 
-        <div className="w-[690.77px] h-[26px] justify-start items-center gap-[45px]  inline-flex">
+        <div className="max-w-[690.77px] h-[26px] justify-start items-center gap-[45px]  inline-flex">
           <p className="text-white cursor-pointer text-sm ">
             POLITICA DE PRIVACIDAD
           </p>
@@ -19,12 +20,12 @@ const Footer = () => {
           </p>
           <div className="flex gap-5">
             <img
-              className="w-6 h-6"
+              className="max-w-6 h-6"
               src="/src/assets/IconIG.svg"
               alt="Instagram"
             ></img>
             <img
-              className="w-6 h-6"
+              className="max-w-6 h-6"
               src="/src/assets/IconLinkdn.svg"
               alt="LinkedIn"
             ></img>
@@ -46,7 +47,7 @@ const Footer = () => {
       
 
       </div>
-      
+      </div>
     </div>
   );
 };
