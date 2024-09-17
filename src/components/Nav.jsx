@@ -2,51 +2,60 @@ import React from "react";
 
 const Nav = () => {
   const scrollToContact = () => {
-    window.scrollTo({
-      top: 1500,
-      behavior: "smooth",
-    });
+    const contacto = document.getElementById("contacto");
+    if (contacto) {
+      contacto.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const scrollToAboutOurTeam = () => {
+    const contacto = document.getElementById("team");
+    if (contacto) {
+      contacto.scrollIntoView({ behavior: "smooth" });
+    }
   };
   const scrollToAboutUs = () => {
-    window.scrollTo({
-      top: 800,
-      behavior: "smooth",
-    });
+    const AboutUs = document.getElementById("AboutUs");
+    if (AboutUs) {
+      AboutUs.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <div className="w-full absolute flex justify-center">
-      <div className="w-[1440px] h-[65px] px-8 py-4 items-start gap-[30px] flex justify-between">
-        <div className="justify-start items-start gap-1 flex">
+      <div className="max-w-[1440px] w-full h-[65px] px-8 py-4 flex justify-between">
+        <div className="justify-start items-start gap-1 flex ">
           <img
             className="w-[108px] h-[33px] mx-[31px]"
             src="https://via.placeholder.com/108x33"
           />
           <button
             onClick={scrollToAboutUs}
-            className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex"
+            className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex max-lg:hidden"
           >
-            <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight">
+            <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight ">
               ¿Que es abitacolo?
             </div>
           </button>
-          <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex">
+          <button
+            onClick={scrollToAboutOurTeam}
+            className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex max-lg:hidden"
+          >
             <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight">
               Nuestro equipo
             </div>
-          </div>
-          <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex">
+          </button>
+          <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex max-lg:hidden">
             <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight">
               Hitos abitacolo
             </div>
           </div>
-          <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex">
+          <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex max-lg:hidden">
             <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight">
               Nuestros productos
             </div>
           </div>
         </div>
-        <div className="justify-start items-start gap-2 flex">
+        <div className="gap-2 flex max-lg:hidden">
           <div className="px-2 py-1.5 bg-white/90 rounded-sm backdrop-blur-sm justify-start items-start gap-1 flex">
             <div className="text-black/90 text-sm font-normal  uppercase leading-tight tracking-tight">
               ES

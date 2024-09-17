@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import TeamCard from "./TeamCard";
+import FlechaIzq from "../../assets/FlechaIzq.svg";
+import FlechaDrch from "../../assets/FlechaDrch.svg";
 
 const team = [
   {
     person: "Juan Pérez",
     position: "CEO",
-    linkImage: "https://example.com/images/juan.jpg",
+    linkImage: "https://via.placeholder.com/430x300",
     description:
       "Juan es el fundador y CEO de la empresa, con más de 15 años de experiencia en la industria.",
     linkedin: "https://www.linkedin.com/in/juanperez",
@@ -14,7 +16,7 @@ const team = [
   {
     person: "Ana Rodríguez",
     position: "CTO",
-    linkImage: "https://example.com/images/ana.jpg",
+    linkImage: "https://via.placeholder.com/430x300",
     description:
       "Ana lidera el equipo de tecnología y es experta en desarrollo de software y arquitectura de sistemas.",
     linkedin: "https://www.linkedin.com/in/anarodriguez",
@@ -23,7 +25,7 @@ const team = [
   {
     person: "Carlos Gómez",
     position: "CFO",
-    linkImage: "https://example.com/images/carlos.jpg",
+    linkImage: "https://via.placeholder.com/430x300",
     description:
       "Carlos gestiona las finanzas de la empresa y se asegura de su estabilidad económica.",
     linkedin: "https://www.linkedin.com/in/carlosgomez",
@@ -32,7 +34,7 @@ const team = [
   {
     person: "María Fernández",
     position: "COO",
-    linkImage: "https://example.com/images/maria.jpg",
+    linkImage: "https://via.placeholder.com/430x300",
     description:
       "María coordina las operaciones internas para garantizar la eficiencia en todos los procesos.",
     linkedin: "https://www.linkedin.com/in/mariafernandez",
@@ -41,7 +43,7 @@ const team = [
   {
     person: "Pedro Sánchez",
     position: "CMO",
-    linkImage: "https://example.com/images/pedro.jpg",
+    linkImage: "https://via.placeholder.com/430x300",
     description:
       "Pedro lidera las estrategias de marketing, ayudando a la empresa a llegar a nuevos mercados.",
     linkedin: "https://www.linkedin.com/in/pedrosanchez",
@@ -50,7 +52,7 @@ const team = [
   {
     person: "Laura Martínez",
     position: "HR Manager",
-    linkImage: "https://example.com/images/laura.jpg",
+    linkImage: "https://via.placeholder.com/430x300",
     description:
       "Laura gestiona el talento humano y se encarga de los procesos de contratación y bienestar.",
     linkedin: "https://www.linkedin.com/in/lauramartinez",
@@ -72,36 +74,48 @@ const TeamCarousel = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, 10000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto overflow-hidden">
-      <div
-        className="flex transition-transform duration-300 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
-      >
-        {team.map((member, index) => (
-          <div key={index} className="w-1/3 flex-shrink-0 p-4">
-            <TeamCard {...member} />
-          </div>
-        ))}
+    <div className="relative bg-gray-100 w-full max-w-7xl mx-auto p-8">
+      <div className="overflow-hidden">
+        <div
+          className="flex transition-transform duration-300 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+        >
+          {team.map((member, index) => (
+            <div key={index} className="w-1/3 flex-shrink-0">
+              <TeamCard {...member} />
+            </div>
+          ))}
+        </div>
       </div>
-      <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2"
-        onClick={prevSlide}
-      >
-        &#8592;
-      </button>
-      <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2"
-        onClick={nextSlide}
-      >
-        &#8594;
-      </button>
+
+      <div className="flex justify-center items-center mt-6 space-x-4">
+        <button className="p-2" onClick={prevSlide}>
+          {/* Flecha izquierda */}
+          <img src={FlechaIzq} alt="" />
+        </button>
+
+        <div className="flex space-x-2">
+          {[...Array(team.length - 2)].map((_, index) => (
+            <button
+              key={index}
+              className={`w-4 h-4 rounded-full ${
+                index === currentIndex ? "bg-[#919e32]" : "bg-gray-300"
+              }`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
+        </div>
+
+        <button className="p-2" onClick={nextSlide}>
+          <img src={FlechaDrch} alt="" />
+        </button>
+      </div>
     </div>
   );
 };
-
 export default TeamCarousel;

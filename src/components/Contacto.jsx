@@ -2,12 +2,12 @@ import React from "react";
 
 const Contacto = () => {
   return (
-    <div className="grid justify-items-center mb-5">
+    <div id="contacto" className="grid justify-items-center mb-5">
       <div className="grid gap-10 mb-10">
         <p className="text-[42px] font-semibold leading-[52px]">
           Ponte en Contacto con Nosotros
         </p>
-        <div className="w-[714px] text-[#151438]/40 text-[22px] font-medium leading-loose">
+        <div className="max-w-[714px] text-[#151438]/40 text-[22px] font-medium leading-loose">
           ¿Quieres más información sobre este proyecto? Puedes escribirnos o
           llamarnos, te informaremos encantados.
         </div>
@@ -20,7 +20,7 @@ const Contacto = () => {
         method="POST"
         className="h-[516px] flex flex-col gap-[35px]"
       >
-        <div className="w-[783.71px] flex justify-between items-center">
+        <div className="max-w-[783.71px] flex gap-2 justify-between items-center">
           <input
             type="text"
             name="nombre"
@@ -41,12 +41,12 @@ const Contacto = () => {
           name="email"
           placeholder="Email"
           autoComplete="email"
-          className="w-[792px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium leading-relaxed placeholder-[#151438]/40"
+          className="max-w-[792px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium leading-relaxed placeholder-[#151438]/40"
         />
         <select
           name="motivo"
           autoComplete="off"
-          className="w-[792px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium leading-relaxed text-[#151438]/40"
+          className="max-w-[792px] h-[50px] rounded-sm border border-[#666666] px-6 text-lg font-medium leading-relaxed text-[#151438]/40"
         >
           <option value="">Indícanos el motivo del contacto</option>
           <option value="consulta">Consulta</option>
@@ -57,7 +57,7 @@ const Contacto = () => {
           name="mensaje"
           placeholder="Tu mensaje"
           autoComplete="off"
-          className="w-[792px] h-[170px] rounded-sm border border-[#666666] p-4 text-lg font-medium leading-relaxed placeholder-[#151438]/40 resize-none"
+          className="max-w-[792px] h-[170px] rounded-sm border border-[#666666] p-4 text-lg font-medium leading-relaxed placeholder-[#151438]/40 resize-none"
         />
         <button
           type="submit"
