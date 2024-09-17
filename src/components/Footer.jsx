@@ -1,4 +1,7 @@
 import React from "react";
+import IconLinkdn from "../assets/IconLinkdnWhite.svg";
+import IconIG from "../assets/IconIGWhite.svg";
+import LogoAbitacolo from "../assets/LogoAbitacoloFooter.png";
 
 const Footer = () => {
   return (
@@ -6,8 +9,8 @@ const Footer = () => {
       <div className="max-w-[1440px]">
         <div className="flex items-center justify-between gap-[45px]">
           <img
-            className="max-w-[328.99px] h-[93px]"
-            src="/src/assets/LogoAbitacoloFooter.png"
+            className="w-[328.99px] h-[93px]"
+            src={LogoAbitacolo}
             alt="Logo Abitacolo"
           ></img>
 
@@ -19,16 +22,8 @@ const Footer = () => {
               POLITICA DE COOKIES
             </p>
             <div className="flex gap-5">
-              <img
-                className="max-w-6 h-6"
-                src="/src/assets/IconIG.svg"
-                alt="Instagram"
-              ></img>
-              <img
-                className="max-w-6 h-6"
-                src="/src/assets/IconLinkdn.svg"
-                alt="LinkedIn"
-              ></img>
+              <img className="w-6 h-6" src={IconIG} alt="Instagram"></img>
+              <img className="w-6 h-6" src={IconLinkdn} alt="LinkedIn"></img>
             </div>
           </div>
         </div>
