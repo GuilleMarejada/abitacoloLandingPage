@@ -2,32 +2,35 @@ import React, { useState, useEffect } from "react";
 import TeamCard from "./TeamCard";
 import FlechaIzq from "../../assets/FlechaIzq.svg";
 import FlechaDrch from "../../assets/FlechaDrch.svg";
+import GuillermoAbitacolo from "../../assets/Team/GPC_Fotografía.webp";
+import CathyAbitacolo from "../../assets/Team/JCM_Fotografia.webp";
+import ManuAbitacolo from "../../assets/Team/MBR_Fotografía.webp";
 
 const team = [
   {
-    person: "Juan Pérez",
-    position: "CEO",
-    linkImage: "https://via.placeholder.com/430x300",
+    person: "Juliette C. Mallen",
+    position: "Founder & CEO",
+    linkImage: CathyAbitacolo,
     description:
-      "Juan es el fundador y CEO de la empresa, con más de 15 años de experiencia en la industria.",
+      "Soy Cathy, arquitecta con especialización en comunicación arquitectónica y experiencia en la dirección creativa de eventos culturales.",
     linkedin: "https://www.linkedin.com/in/juanperez",
     instagram: "https://www.instagram.com/juanperez",
   },
   {
-    person: "Ana Rodríguez",
-    position: "CTO",
-    linkImage: "https://via.placeholder.com/430x300",
+    person: "Guillermo Perales",
+    position: "Co-Founder",
+    linkImage: GuillermoAbitacolo,
     description:
-      "Ana lidera el equipo de tecnología y es experta en desarrollo de software y arquitectura de sistemas.",
+      "¡Hola! Soy Guille, madrileño y arquitecto habilitado por la Escuela Técnica Superior de Arquitectura de Madrid (ETSAM), con estudios complementarios en el University College de Dublín (Irlanda). También me he formado en diseño gráfico en el Istituto Marangoni de Milán (Italia) y cuento con el Máster en Comunicación Arquitectónica de la Universidad Politécnica de Madrid (UPM).",
     linkedin: "https://www.linkedin.com/in/anarodriguez",
     instagram: "https://www.instagram.com/anarodriguez",
   },
   {
-    person: "Carlos Gómez",
-    position: "CFO",
-    linkImage: "https://via.placeholder.com/430x300",
+    person: "Manuel Ben R.",
+    position: "UX Product Designer Specialist",
+    linkImage: ManuAbitacolo,
     description:
-      "Carlos gestiona las finanzas de la empresa y se asegura de su estabilidad económica.",
+      "Soy Diseñador de Productos Digitales con más de 2 años de experiencia en el ecosistema digital, donde he demostrado una sólida capacidad para desarrollar soluciones centradas en el usuario que se alinean con los objetivos empresariales y generan ingresos. Mi enfoque está en crear diseños que resuelvan problemas reales y mejoren la experiencia del usuario.",
     linkedin: "https://www.linkedin.com/in/carlosgomez",
     instagram: "https://www.instagram.com/carlosgomez",
   },
@@ -75,7 +78,7 @@ const TeamCarousel = () => {
       setCardsToShow(width >= 1100 ? 3 : width >= 900 ? 2 : 1);
     };
 
-    handleResize(); // Set initial state
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

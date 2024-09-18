@@ -13,7 +13,11 @@ const TeamCard = ({
 }) => {
   return (
     <div className="w-full h-[540px] max-w-sm bg-white flex flex-col gap-6 p-4">
-      <img className="w-full h-auto" src={linkImage} alt="Team member" />
+      <img
+        className="w-[427px] h-[292px] object-scale-down"
+        src={linkImage}
+        alt="Team member"
+      />
       <div className="flex flex-col gap-4">
         <div>
           <h2 className="text-black/90 text-2xl font-semibold uppercase leading-7">
@@ -46,7 +50,7 @@ const TeamCard = ({
 TeamCard.propTypes = {
   person: PropTypes.string,
   position: PropTypes.string,
-  linkImage: PropTypes.string,
+  // linkImage: PropTypes.img,
   description: PropTypes.string,
   linkedin: PropTypes.string,
   instagram: PropTypes.string,
