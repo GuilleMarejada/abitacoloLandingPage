@@ -62,31 +62,49 @@ const team = [
 
 const TeamCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(3);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % (team.length - 2));
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + (team.length - 2)) % (team.length - 2)
-    );
-  };
+  const nextSlide = () =>
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % team.length);
+  const prevSlide = () =>
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + team.length) % team.length);
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 10000);
-    return () => clearInterval(interval);
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setCardsToShow(width >= 1100 ? 3 : width >= 900 ? 2 : 1);
+    };
+
+    handleResize(); // Set initial state
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const intervalId = setInterval(nextSlide, 10000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const getVisibleCards = () => {
+    const visible = team.slice(currentIndex, currentIndex + cardsToShow);
+    const extra = team.slice(
+      0,
+      Math.max(0, currentIndex + cardsToShow - team.length)
+    );
+    return visible.concat(extra);
+  };
+
   return (
-    <div className="relative bg-gray-100 w-full max-w-7xl mx-auto p-8">
+    <div className="relative w-full max-w-7xl mx-auto p-8 bg-[#0000000A] rounded-sm">
       <div className="overflow-hidden">
-        <div
-          className="flex transition-transform duration-300 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
-        >
-          {team.map((member, index) => (
-            <div key={index} className="w-1/3 flex-shrink-0">
+        <div className="flex transition-transform duration-300 ease-in-out">
+          {getVisibleCards().map((member, index) => (
+            <div
+              key={index}
+              className={`flex justify-center ${
+                cardsToShow === 3 ? "w-1/3" : "w-full"
+              }`}
+            >
               <TeamCard {...member} />
             </div>
           ))}
@@ -94,13 +112,12 @@ const TeamCarousel = () => {
       </div>
 
       <div className="flex justify-center items-center mt-6 space-x-4">
-        <button className="p-2" onClick={prevSlide}>
-          {/* Flecha izquierda */}
-          <img src={FlechaIzq} alt="" />
+        <button className="p-2" onClick={prevSlide} aria-label="Ver anterior">
+          <img src={FlechaIzq} alt="Anterior" />
         </button>
 
         <div className="flex space-x-2">
-          {[...Array(team.length - 2)].map((_, index) => (
+          {team.map((_, index) => (
             <button
               key={index}
               className={`w-4 h-4 rounded-full ${
@@ -111,11 +128,12 @@ const TeamCarousel = () => {
           ))}
         </div>
 
-        <button className="p-2" onClick={nextSlide}>
-          <img src={FlechaDrch} alt="" />
+        <button className="p-2" onClick={nextSlide} aria-label="Ver siguiente">
+          <img src={FlechaDrch} alt="Siguiente" />
         </button>
       </div>
     </div>
   );
 };
+
 export default TeamCarousel;
