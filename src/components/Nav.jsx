@@ -7,6 +7,12 @@ const Nav = () => {
       contacto.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const scrollToHitos = () => {
+    const contacto = document.getElementById("hitos");
+    if (contacto) {
+      contacto.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const scrollToAboutOurTeam = () => {
     const contacto = document.getElementById("team");
     if (contacto) {
@@ -44,11 +50,14 @@ const Nav = () => {
               Nuestro equipo
             </div>
           </button>
-          <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex max-lg:hidden">
+          <button
+            onClick={scrollToHitos}
+            className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex max-lg:hidden"
+          >
             <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight">
               Hitos abitacolo
             </div>
-          </div>
+          </button>
           <div className="px-2 py-1.5 bg-[#2e2f32] rounded-sm justify-start items-start gap-1 flex max-lg:hidden">
             <div className="text-white text-sm font-normal  uppercase leading-tight tracking-tight">
               Nuestros productos
