@@ -9,7 +9,10 @@ const Hitos = () => {
   };
   return (
     <div className="w-full py-32 grid justify-center bg-[#333333]">
-      <div className="bg-[#919e32] grid justify-center max-w-[1376px] w-full rounded-lg">
+      <div
+        id="hitos"
+        className="bg-[#919e32] grid justify-center max-w-[1376px] w-full rounded-lg"
+      >
         <div className="h-[350px] px-8 py-24 justify-center items-center gap-2.5 inline-flex">
           <div className="flex-col justify-start items-center gap-2.5 inline-flex">
             <div className="w-[528px] text-white/90 text-[56px] font-semibold font-['Raleway'] uppercase leading-[64px]">

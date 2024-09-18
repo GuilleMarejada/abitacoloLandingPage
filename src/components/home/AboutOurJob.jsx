@@ -4,7 +4,7 @@ const AboutOurJob = () => {
   return (
     <div className="w-full grid justify-center bg-[#d9d9d9]">
       <div className="min-h-[748px] px-8 py-24 flex-col justify-start items-center gap-24 inline-flex">
-        <div className="w-[796px] text-center text-black/90 text-[56px] font-normal font-['Raleway'] uppercase leading-[64px]">
+        <div className="max-w-[796px] min-w[400px] text-center text-black/90 md:text-[56px] max-md:text-[32px] font-normal font-['Raleway'] uppercase leading-[64px]">
           ¿COmo trabajamos?
         </div>
         <div className="justify-start items-start gap-4 min-[1440px]:inline-flex max-[1440px]:grid ">
