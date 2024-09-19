@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import DropDown from "./DropDown";
+
 
 const Nav = () => {
+  const [isMobile , setIsMobile] = useState(false);
+  const [isMiddle , setIsMiddle] = useState(false);  
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      setIsMiddle(window.innerWidth >= 768 && window.innerWidth <= 1023);
+    };
+
+    handleResize(); // Llama a la función al inicio
+    window.addEventListener('resize', handleResize); // Detecta cambios en el tamaño de la ventana
+
+    // Limpia el listener al desmontar el componente
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const scrollToContact = () => {
     const contacto = document.getElementById("contacto");
     if (contacto) {
@@ -20,7 +38,14 @@ const Nav = () => {
     }
   };
 
+
+
   return (
+    <div className="flex justify-end">
+      {
+        isMobile || isMiddle ? (
+          <DropDown/>
+        ) : (
     <div className="w-full absolute flex justify-center">
       <div className="max-w-[1440px] w-full h-[65px] px-8 py-4 flex justify-between">
         <div className="justify-start items-start gap-1 flex ">
@@ -77,7 +102,10 @@ const Nav = () => {
         </div>
       </div>
     </div>
-  );
+        )}
+    </div>
+  );       
+         
 };
 
 export default Nav;

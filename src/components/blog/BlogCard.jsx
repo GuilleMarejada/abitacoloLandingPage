@@ -11,11 +11,13 @@ const BlogCard = ({
     return(
         <>
         
+        
 
-        <div className="w-[400] h-50">
-            <img className="w-[304] h-44" src={blogImage}></img>
-            <p>{text}</p>
+        <div className="flex flex-col gap-3 p-5 lg:w-76 md:w-76 w-96  ">
+            <img className="mt-5" src={blogImage}/>
+            <p className="text-center text-xl">{text}</p>
         </div>
+        
         </>
     )
 }
