@@ -43,14 +43,14 @@ const OurProducts = () => {
           {productInfo.map((product, index) => (
             <div
               key={index}
-              className="h-52 bg-white/5 flex items-center gap-8"
+              className="md:h-52 max-md:max-w:398 bg-white/5 md:flex items-center gap-8"
             >
               <img
                 className="max-w-80 h-52"
                 src={product.image}
                 alt={product.title}
               />
-              <div className="flex flex-col pr-8 gap-8">
+              <div className="flex flex-col md:pr-8 gap-8 max-md:m-4">
                 <h3 className="text-white text-xl font-semibold font-['Raleway'] uppercase">
                   {product.title}
                 </h3>
