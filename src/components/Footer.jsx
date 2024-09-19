@@ -73,7 +73,7 @@ const Footer = () => {
               Contacts
             </button>
           </div>
-          <p className="text-white text-sm text-center mt-1">
+          <p className="text-white text-sm mt-1">
             © 2024 Abitacolo. All rights reserved.
           </p>
         </div>
