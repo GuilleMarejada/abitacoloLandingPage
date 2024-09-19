@@ -60,7 +60,7 @@ const CardsDisplay = () => {
         <>
         <h1 className="uppercase text-4xl font-bold text-center text-verdeAbitacolo mt-10"> Descubre nuestra historia</h1>
         <div className="flex justify-center">
-            <div className="w-[500px]  grid gap-4 lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-1">
+            <div className="w-full grid justify-items-center gap-4 lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-1">
               {
                   cards.map((card, index) => (
                       
