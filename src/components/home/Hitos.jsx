@@ -34,7 +34,11 @@ const Hitos = () => {
           </div>
         </div>
 
-        <img src={activeImage} alt="hero" />
+        <img
+          className="w-full max-w-[1376px] h-[400px] object-cover"
+          src={activeImage}
+          alt="hero"
+        />
 
         <div className="relative flex justify-start items-start">
           <div className="self-stretch px-8 pb-24 bg-black/5 flex gap-4">
