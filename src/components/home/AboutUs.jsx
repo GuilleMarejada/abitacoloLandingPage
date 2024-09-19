@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <div id="AboutUs" className="w-full bg-white grid justify-center pb-8">
       <div className="xl:h-[688px] max-w-[1440px] px-8 py-32 xl:flex gap-4">
-        <h2 className="text-black text-5xl font-normal font-['Raleway'] uppercase leading-[56px] max-w-[680px] pb-4 w-full">
+        <h2 className="text-black md:text-[56px] max-md:text-[32px] font-normal font-['Raleway'] uppercase leading-[56px] max-w-[680px] pb-4 w-full">
           ¿Qué es Abitacolo?
         </h2>
         <div className="flex flex-col gap-12 grow">
@@ -30,10 +30,10 @@ const AboutUs = () => {
               </strong>
             </p>
           </div>
-          <div className="flex gap-4 w-fit">
+          <div className="flex gap-4">
             <button
               onClick={scrollToContact}
-              className="px-6 py-4 bg-[#919e32] rounded-sm backdrop-blur-xl text-white text-base font-normal font-['Raleway'] uppercase"
+              className="px-6 py-4 bg-[#919e32] rounded-sm backdrop-blur-xl text-white text-base font-normal font-['Raleway'] uppercase max-md:w-full"
             >
               ¡Cuéntanos tu idea!
             </button>

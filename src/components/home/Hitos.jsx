@@ -1,83 +1,123 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Hitos = () => {
+  const [activeTitle, setActiveTitle] = useState(1);
+  const [activeImage, setActiveImage] = useState(
+    "https://via.placeholder.com/1440x400"
+  );
+
   const scrollToContact = () => {
     const contacto = document.getElementById("contacto");
-    if (contacto) {
-      contacto.scrollIntoView({ behavior: "smooth" });
-    }
+    contacto?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const handleHover = (title, imageUrl) => {
+    setActiveTitle(title);
+    setActiveImage(imageUrl);
+  };
+
   return (
     <div className="w-full py-32 grid justify-center bg-[#333333]">
-      <div className="bg-[#919e32] grid justify-center max-w-[1376px] w-full rounded-lg">
-        <div className="h-[350px] px-8 py-24 justify-center items-center gap-2.5 inline-flex">
-          <div className="flex-col justify-start items-center gap-2.5 inline-flex">
-            <div className="w-[528px] text-white/90 text-[56px] font-semibold font-['Raleway'] uppercase leading-[64px]">
+      <div
+        id="hitos"
+        className="bg-[#919e32] grid justify-center max-w-[1376px] w-full rounded-lg"
+      >
+        <div className="h-[350px] px-8 py-24 flex justify-center items-center">
+          <div className="grid justify-center">
+            <h1 className="w-[528px] justify-self-center text-white/90 text-[56px] font-semibold uppercase leading-[64px]">
               hitos abitacolo
-            </div>
-            <div className="w-[956px] text-white/90 text-2xl font-normal font-['Raleway'] uppercase leading-[42px]">
+            </h1>
+            <p className="w-[956px] text-white/90 text-2xl uppercase leading-[42px]">
               Únete a nosotros en esta emocionante etapa de crecimiento y forma
               parte de nuestra historia.
+            </p>
+          </div>
+        </div>
+
+        <img
+          className="w-full max-w-[1376px] h-[400px] object-cover"
+          src={activeImage}
+          alt="hero"
+        />
+
+        <div className="relative flex justify-start items-start">
+          <div className="self-stretch px-8 pb-24 bg-black/5 flex gap-4">
+            <div
+              onMouseEnter={() =>
+                handleHover(
+                  1,
+                  "https://via.placeholder.com/1440x400?text=Imagen+01"
+                )
+              }
+              className={`relative grow shrink p-12 flex-col gap-6 inline-flex ${
+                activeTitle === 1
+                  ? "bg-[#202023] text-white top-[-20px]"
+                  : "bg-[#333333] text-white/60 top-[-20px]"
+              }`}
+            >
+              <div className="text-2xl font-bold uppercase">Titulo 01</div>
+              <div className="text-sm uppercase">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque ut est at felis sodales tempus.
+              </div>
+            </div>
+
+            <div
+              onMouseEnter={() =>
+                handleHover(
+                  2,
+                  "https://via.placeholder.com/1440x400?text=Imagen+02"
+                )
+              }
+              className={`relative grow shrink p-12 flex-col gap-6 inline-flex ${
+                activeTitle === 2
+                  ? "bg-[#202023] text-white top-[-20px]"
+                  : "bg-[#333333] text-white/60 top-[-20px]"
+              }`}
+            >
+              <div className="text-2xl font-bold uppercase">Titulo 02</div>
+              <div className="text-sm uppercase">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque ut est at felis sodales tempus.
+              </div>
+            </div>
+
+            <div
+              onMouseEnter={() =>
+                handleHover(
+                  3,
+                  "https://via.placeholder.com/1440x400?text=Imagen+03"
+                )
+              }
+              className={`relative grow shrink p-12 flex-col gap-6 inline-flex ${
+                activeTitle === 3
+                  ? "bg-[#202023] text-white top-[-20px]"
+                  : "bg-[#333333] text-white/60 top-[-20px]"
+              }`}
+            >
+              <div className="text-2xl font-bold uppercase">Titulo 03</div>
+              <div className="text-sm uppercase">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque ut est at felis sodales tempus.
+              </div>
             </div>
           </div>
         </div>
-        <div className=" flex-col justify-start items-start inline-flex">
-          <div className="self-stretch px-8 pb-24 bg-black/5 justify-center items-start gap-4 inline-flex">
-            <div className="grow shrink basis-0 self-stretch p-12 bg-[#202023] flex-col justify-start items-start gap-6 inline-flex">
-              <div className="self-stretch text-white/90 text-2xl font-bold font-['Raleway'] uppercase leading-7">
-                Titulo 01
-              </div>
-              <div className="self-stretch text-white text-sm font-normal font-['Raleway'] uppercase leading-tight">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque ut est at felis sodales tempus. Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Pellentesque ut est at
-                felis sodales tempus.
-              </div>
-            </div>
-            <div className="grow shrink basis-0 self-stretch p-12 bg-[#333333] flex-col justify-start items-start gap-6 inline-flex">
-              <div className="self-stretch opacity-60 text-white/90 text-2xl font-bold font-['Raleway'] uppercase leading-7">
-                Titulo 02
-              </div>
-              <div className="self-stretch opacity-60 text-white text-sm font-normal font-['Raleway'] uppercase leading-tight">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque ut est at felis sodales tempus.
-                <br />
-                <br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque ut est at felis sodales tempus.
-              </div>
-            </div>
-            <div className="grow shrink basis-0 self-stretch p-12 bg-[#333333] flex-col justify-start items-start gap-6 inline-flex">
-              <div className="self-stretch opacity-60 text-white/90 text-2xl font-semibold font-['Raleway'] uppercase leading-7">
-                Titulo 03
-              </div>
-              <div className="self-stretch opacity-60 text-white text-sm font-normal font-['Raleway'] uppercase leading-tight">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque ut est at felis sodales tempus.
-                <br />
-                <br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque ut est at felis sodales tempus.
-              </div>
+
+        <div className="h-20 px-8 py-4 border-b border-white/10 flex justify-between items-center">
+          <div className="opacity-0 flex items-center gap-4">
+            <div className="text-white text-2xl font-normal uppercase">
+              Lee toda nuestra historia
             </div>
           </div>
+          <button className="px-4 py-3 bg-black/30 rounded-sm border border-white/10 backdrop-blur-xl text-white/90 uppercase">
+            Ver todos
+          </button>
         </div>
-        <div className="h-20 px-8 py-4 border-b border-white/10 justify-between items-center inline-flex">
-          <div className="opacity-0 justify-start items-start gap-4 flex">
-            <div className="text-white text-2xl font-normal font-['Azeret Mono'] uppercase leading-7">
-              Lee todas nuestra historia
-            </div>
-          </div>
-          <div className="px-4 py-3 bg-black/30 rounded-sm border border-white/10 backdrop-blur-xl justify-center items-center gap-1 flex">
-            <div className="text-white/90 text-base font-normal font-['Raleway'] uppercase leading-normal tracking-tight">
-              Ver todos
-            </div>
-            <div className="w-6 h-6 relative" />
-          </div>
-        </div>
+
         <div className="h-[408px] px-8 py-24 border-t border-black/10 flex items-center gap-4">
           <div className="flex-1 pr-32">
-            <p className="text-white/60 text-[28px] font-['Raleway'] leading-9">
+            <p className="text-white/60 text-[28px] leading-9">
               En Abitacolo cada día damos pasos firmes hacia el éxito, estamos
               buscando inversores visionarios que quieran ser parte de nuestra
               emocionante trayectoria. Únete a nosotros y sé parte de una
@@ -85,12 +125,12 @@ const Hitos = () => {
             </p>
           </div>
           <div className="flex-1 flex flex-col gap-7">
-            <div className="text-white/90 text-[40px] font-['Raleway']">
+            <div className="text-white/90 text-[40px]">
               ¡Empieza tu historia con nosotros!
             </div>
             <button
               onClick={scrollToContact}
-              className="h-14 px-6 py-4 bg-[#333333] rounded-sm text-white text-base font-normal font-['Raleway'] uppercase leading-normal tracking-tight"
+              className="h-14 px-6 py-4 bg-[#333333] rounded-sm text-white uppercase tracking-tight"
             >
               Contáctanos
             </button>

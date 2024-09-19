@@ -2,7 +2,7 @@ import React from "react";
 
 const Contacto = () => {
   return (
-    <div id="contacto" className="grid justify-items-center mb-5">
+    <div id="contacto" className="grid justify-items-center mb-5 pt-12">
       <div className="grid gap-10 mb-10">
         <p className="text-[42px] font-semibold leading-[52px]">
           Ponte en Contacto con Nosotros
