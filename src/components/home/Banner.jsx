@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <div className="w-full h-[800px] bg-black/70 grid justify-center">
       <div
-        className="max-w-[1440px] bg-cover bg-center grid"
+        className="max-w-[1440px] w-full bg-cover bg-center grid"
         style={{ backgroundImage: `url(${imgBanner})` }}
       >
         <div className="px-8 py-24 grid gap-2.5 bg-gradient-to-r from-black/80 to-black/50 content-end">
