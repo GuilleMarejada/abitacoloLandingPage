@@ -13,7 +13,7 @@ const AboutOurTeam = () => {
       id="team"
       className="w-full bg-[#0000000A] grid justify-center pb-8 px-4"
     >
-      <div className="max-w-[1440px] w-full bg-white rounded-sm">
+      <div className="max-w-[1376px] w-full bg-white rounded-sm">
         <div className="md:h-64 max-md:h-[132px] px-8 py-24 max-md:py-12 bg-white flex justify-center items-center rounded-sm">
           <h1 className="md:text-[56px] max-md:text-[32px] text-black/90 font-['Raleway'] uppercase leading-[64px]">
             Nuestro equipo

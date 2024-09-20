@@ -43,18 +43,14 @@ const OurProducts = () => {
           {productInfo.map((product, index) => (
             <div
               key={index}
-              className="md:h-52 max-md:max-w:398 bg-white/5 md:flex items-center gap-8"
+              className=" bg-white/5 md:flex items-center max-w-[680px] max-md:max-w-[398px]"
             >
-              <img
-                className="max-w-80 h-52"
-                src={product.image}
-                alt={product.title}
-              />
-              <div className="flex flex-col md:pr-8 gap-8 max-md:m-4">
+              <img className="w-full" src={product.image} alt={product.title} />
+              <div className="flex flex-col p-4  gap-8">
                 <h3 className="text-white text-xl font-semibold font-['Raleway'] uppercase">
                   {product.title}
                 </h3>
-                <p className="max-w-[296px] text-white/40 text-base font-normal font-['Raleway'] uppercase">
+                <p className="w- text-white/40 text-base font-normal font-['Raleway'] uppercase">
                   {product.description}
                 </p>
               </div>
