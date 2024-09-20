@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="md:flex items-center justify-between">
           <Link to="/">
             <img
-              className="max-w-[329px] h-auto"
+              className="max-w-[329px] max-md:w-[135px] h-auto"
               src={AbitacoloBlanco}
               alt="Logo Abitacolo"
             />
