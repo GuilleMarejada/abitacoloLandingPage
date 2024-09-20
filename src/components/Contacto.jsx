@@ -3,8 +3,8 @@ import React from "react";
 const Contacto = () => {
   return (
     <div id="contacto" className="grid justify-items-center mb-5 pt-12">
-      <div className="grid gap-10 mb-10">
-        <p className="text-[42px] font-semibold leading-[52px]">
+      <div className="grid gap-10 mb-10  grid-cols-1 self-stretch">
+        <p className="self-stretch text-black text-[42px] font-semibold leading-[52px] max-sm:text-[32px]">
           Ponte en Contacto con Nosotros
         </p>
         <div className="max-w-[714px] text-[#151438]/40 text-[22px] font-medium leading-loose">

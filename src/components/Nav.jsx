@@ -31,14 +31,26 @@ const Nav = () => {
 
 
   return (
-    <div className="flex justify-end">
+    <div className="container absolute">  
       {
-        isMobile || isMiddle ? (
-          <DropDown/>
+        isMobile || isMiddle ? (     
+          <div className="gap-1  flex justify-between  w-full px-4 ">
+  <Link to="/">
+    <img
+      className="w-[108px] h-auto max-sm:mt-10"
+      src={AbitacoloBlanco}
+      alt="Abitacolo"
+    />
+  </Link>
+
+  {/* El DropDown ahora es parte del flujo de flexbox */}
+  <DropDown className="relative" />
+</div>
+
         ) : (
     <div className="w-full absolute flex justify-center">
       <div className="max-w-[1440px] w-full h-[65px] px-8 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 ">
           <Link to="/">
             <img
               className="w-[108px] h-auto mx-[31px]"
